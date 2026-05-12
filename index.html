@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whitelist de Presentes da Família</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <h1>🎁 Whitelist da Família</h1>
+      <p>Escolha seu nome, diga o presente dos sonhos e veja tudo aparecer aqui na hora.</p>
+    </header>
+
+    <section class="card form-card">
+      <h2>Adicionar desejo</h2>
+      <form id="wishlist-form">
+        <label for="name">Quem é você?</label>
+        <select id="name" required>
+          <option value="" disabled selected>Selecione um nome</option>
+          <option>Ana</option>
+          <option>Bruno</option>
+          <option>Carla</option>
+          <option>Diego</option>
+          <option>Elisa</option>
+          <option>Felipe</option>
+        </select>
+
+        <label for="wish">O que você quer ganhar?</label>
+        <input
+          type="text"
+          id="wish"
+          maxlength="120"
+          placeholder="Ex: livro, fone, jogo, pelúcia..."
+          required
+        />
+
+        <button type="submit">Salvar desejo ✨</button>
+      </form>
+    </section>
+
+    <section class="card list-card">
+      <div class="list-header">
+        <h2>Lista da Família</h2>
+        <button id="clear-all" type="button" class="danger">Limpar tudo</button>
+      </div>
+      <ul id="wishes-list" aria-live="polite"></ul>
+      <p id="empty-state" class="empty">Ainda não há desejos. Seja o primeiro! 💝</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
