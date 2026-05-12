@@ -1,0 +1,120 @@
+:root {
+  --bg: #fff7fb;
+  --card: #ffffff;
+  --text: #4e3558;
+  --pink: #ff7db4;
+  --pink-strong: #ff5fa3;
+  --lavender: #c9a3ff;
+  --shadow: 0 12px 30px rgba(130, 80, 125, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Nunito", "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #ffe8f4, var(--bg) 48%);
+  color: var(--text);
+}
+
+.container {
+  width: min(900px, 92vw);
+  margin: 32px auto;
+  display: grid;
+  gap: 20px;
+}
+
+.hero {
+  text-align: center;
+  padding: 10px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 2vw + 1.2rem, 2.7rem);
+}
+
+.card {
+  background: var(--card);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  border: 2px solid #ffd4e9;
+}
+
+form {
+  display: grid;
+  gap: 10px;
+}
+
+label {
+  font-weight: 700;
+}
+
+input,
+select,
+button {
+  font: inherit;
+  border-radius: 12px;
+  border: 2px solid #f3c2db;
+  padding: 10px 12px;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--lavender);
+}
+
+button {
+  border: none;
+  background: linear-gradient(135deg, var(--pink), var(--pink-strong));
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform .12s ease, filter .12s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.02);
+}
+
+.list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.danger {
+  background: #ff8c8c;
+}
+
+#wishes-list {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.wish-item {
+  border: 2px dashed #efb6d5;
+  border-radius: 14px;
+  padding: 12px;
+  background: #fff8fc;
+}
+
+.wish-item strong {
+  color: #7c4a97;
+}
+
+.empty {
+  margin-top: 14px;
+  text-align: center;
+  font-weight: 700;
+  color: #9b6f90;
+}
